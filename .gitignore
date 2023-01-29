@@ -41,3 +41,4 @@ obj/
 /terraform/*/.terraform.lock.hcl
 .gradle
 build/
+terraform/app/terraform.tfstate.backup
