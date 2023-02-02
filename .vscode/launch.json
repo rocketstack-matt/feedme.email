@@ -1,8 +1,9 @@
 {
     "version": "0.2.0",
     "configurations": [
+    
         {
-            "name": "Attach to Java Functions",
+            "name": "Run Azure Functions",
             "type": "java",
             "request": "attach",
             "hostName": "127.0.0.1",
@@ -10,4 +11,4 @@
             "preLaunchTask": "func: host start"
         }
     ]
-}
+}H

@@ -1,9 +1,10 @@
 {
     "azureFunctions.javaBuildTool": "gradle",
-    "azureFunctions.deploySubpath": "build/azure-functions/email-feedme-api-1674840150590",
+    "azureFunctions.deploySubpath": "build/azure-functions/email-feedme-api",
     "azureFunctions.projectLanguage": "Java",
     "azureFunctions.projectRuntime": "~4",
     "debug.internalConsoleOptions": "neverOpen",
     "azureFunctions.preDeployTask": "package (functions)",
-    "java.compile.nullAnalysis.mode": "automatic"
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.updateBuildConfiguration": "automatic"
 }

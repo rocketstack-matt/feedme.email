@@ -8,7 +8,7 @@
 			"problemMatcher": "$func-java-watch",
 			"isBackground": true,
 			"options": {
-				"cwd": "${workspaceFolder}/build/azure-functions/email-feedme-api-1674840150590"
+				"cwd": "${workspaceFolder}/build/azure-functions/email-feedme-api"
 			},
 			"dependsOn": "package (functions)"
 		},
