@@ -2,7 +2,7 @@
 
 Feedme.email is a lightweight application which provides funcionality to allow readers of a blog/website to subscribe to receive rss feed based newsletters. You can find more information on what made us build this project at https://www.matthewba.in/
 
-Feedme.email is build as a serverless application leveraging Microsofts Azure cloud infrastructure. The project uses [Terraform](https://www.terraform.io/) to manage the Azure infrastructure.
+Feedme.email is built as a serverless application leveraging Microsofts Azure cloud infrastructure. The project uses [Terraform](https://www.terraform.io/) to manage the Azure infrastructure.
  
 
 ## Development environment
@@ -48,7 +48,7 @@ If you are just building this for yourself then you can clone the public reposit
 
 Azure requires the application name and storeage account to be unique globally, both names are generated from the project name, as such you'll need to update the project name to be unique (include your initials) in terraform\app\terraform.tfvars and update the queue name in src\main\java\email\feedme\functions\SubscribersFunction.java to refect the same.
 
-#### Initialise Terraform and Deploy infrastructre to Azure
+#### Initialise Terraform and Deploy infrastructure to Azure
 
 - This project uses Terraform to deploy and manage Azure infrastructure
 
