@@ -42,14 +42,11 @@ You'll need to ensure you have the following dependencies and programming langua
 
 Once VS Code has been configured the following steps should be followed to download the code and build.
 
-- if you are planning on contributing to the project then please follow the steps outlined in Git Workflow section as you will need to create a fork of the repository in your own GitHub account and clone this.
+If you are planning on contributing to the project you will need to create a fork of the repository in your own GitHub account and clone this.
 
-- if you are just building this for yourself then you can clone the public repository [click here for more details on how to use git in VS Code](https://code.visualstudio.com/docs/sourcecontrol/overview)
+If you are just building this for yourself then you can clone the public repository [click here for more details on how to use git in VS Code](https://code.visualstudio.com/docs/sourcecontrol/overview)
 
-- Azure requires the application name and storeage account to be unique globally, both names are generated from the project name, as such you'll need to update the project name to be unique (include your initials) in terraform\app\terraform.tfvars and update the queue name in src\main\java\email\feedme\functions\SubscribersFunction.java to refect the same.
-
-- build code using the gradle build
-
+Azure requires the application name and storeage account to be unique globally, both names are generated from the project name, as such you'll need to update the project name to be unique (include your initials) in terraform\app\terraform.tfvars and update the queue name in src\main\java\email\feedme\functions\SubscribersFunction.java to refect the same.
 
 #### Initialise Terraform and Deploy infrastructre to Azure
 
@@ -99,4 +96,4 @@ For detailed output, run func with --verbose flag.
 [2023-02-05T19:03:29.624Z] Java HotSpot(TM) 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be r[2023-02-05T19:03:30.995Z] Worker process started and initialized.
 [2023-02-05T19:03:34.739Z] Host lock lease acquired by instance ID '0000000000000000000000002F3D0C97'.
 ```
-Using curl or a REST client you should be able to post an email address to the functio.
+Using curl or a REST client you should be able to post an email address to the function.
