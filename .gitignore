@@ -42,3 +42,4 @@ obj/
 .gradle
 build/
 terraform/app/terraform.tfstate.backup
+terraform/app/terraform.tfstate
