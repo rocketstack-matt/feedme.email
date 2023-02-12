@@ -9,7 +9,6 @@ import com.azure.communication.email.models.EmailMessage;
 import com.azure.communication.email.models.EmailRecipients;
 import com.azure.communication.email.models.SendEmailResult;
 import com.azure.core.credential.AzureKeyCredential;
-import com.azure.core.util.Context;
 
 
 public class EmailUtil {
@@ -40,7 +39,7 @@ public class EmailUtil {
             .setRecipients(emailRecipients);
         
         SendEmailResult response = emailClient.send(emailMessage);
-        System.out.println("Message Id: " + response.getMessageId());
+        
     } catch (Exception ex)
     {
         throw ex;
