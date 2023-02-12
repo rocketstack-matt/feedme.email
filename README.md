@@ -83,7 +83,16 @@ func azure functionapp fetch-app-settings <projectname>-function-app-dev'
 
 Check the local.settings.json file and confirm that the connection settings have been updated to reflect the connection key
 
-To run the function locally either run the azureFunctionsRun gradle task or go to the 'Run and Debug' Tab via the right menu (or via Ctrl + Shift + D) and select 'Run Azure Function' from 'RUN AND DEBUG' drop down list
+To run the function locally either run the azureFunctionsRun gradle task or go to the 'Run and Debug' Tab via the right menu (or via Ctrl + Shift + D) and select 'Run Azure Function' from 'RUN AND DEBUG' drop down list.
+
+Alternatively you can run locally using command line as follows:
+
+```sh
+
+gradle jar --info
+gradle azureFunctionsRun
+
+```
 
 This should start a local server and you should see the following:
 
@@ -97,3 +106,26 @@ For detailed output, run func with --verbose flag.
 [2023-02-05T19:03:34.739Z] Host lock lease acquired by instance ID '0000000000000000000000002F3D0C97'.
 ```
 Using curl or a REST client you should be able to post an email address to the function.
+
+### Deploying Functions to Azure
+
+Run the following commands to deploy the functions to your Azure subscription:
+
+Please ensure that the resourceGroup and appName defined in the gradle file matches what is specified in the terraform main.tf:
+
+'azurefunctions {
+    resourceGroup = 'feedme-dev' // This should be consistent with the resource group specified under ./terraform/app/main.tf
+    appName = 'email-feedme-api'// This should be consistent with the resource group specified under ./terraform/app/functions-app.tf
+    pricingTier = 'Consumption' // refers https://github.com/microsoft/azure-maven-plugins/tree/develop/azure-functions-maven-plugin#supported-pricing-tiers for all valid values
+    region = 'uksouth'
+    runtime {
+      os = 'linux'
+      javaVersion = "Java 17"
+    }
+}
+'
+
+```sh 
+gradle jar --info
+az login
+gradle azureFunctionsDeploy
